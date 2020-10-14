@@ -1,11 +1,15 @@
-const { combineReducers } = require("redux");
-const { default: cakeReducer } = require("./cakes/cakeReducer");
-const { default: iceCreamReducer } = require("./iceCream/iceCreamReducer");
+
+import userReducer from "./users/userReducer"
+import  {combineReducers} from "redux"
+import cakeReducer from "./cakes/cakeReducer"
+import  iceCreamReducer from "./iceCream/iceCreamReducer"
+
 
 
 const rootReducer = combineReducers({
     cake: cakeReducer,
-    iceCream: iceCreamReducer
+    iceCream: iceCreamReducer,
+    user: userReducer
 })
 
 export default rootReducer
